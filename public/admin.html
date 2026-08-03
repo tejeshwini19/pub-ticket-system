@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>The Bunker Pub - Ticket System</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🍺 THE BUNKER PUB & KITCHEN</h1>
+
+    <div class="card">
+
+        <h2>Create Customer Entry Pass</h2>
+
+        <input
+            type="text"
+            id="name"
+            placeholder="Customer Name"
+        >
+
+        <input
+            type="text"
+            id="phone"
+            placeholder="Phone Number"
+        >
+
+        <input
+            type="number"
+            id="ticketCount"
+            placeholder="Number of Tickets"
+            min="1"
+        >
+
+        <button id="generateBtn">
+            🎟 Generate Ticket
+        </button>
+
+    </div>
+
+    <div class="card">
+
+        <h2>Generated Entry Pass</h2>
+
+        <p class="ticket-id-line">
+
+            <strong>Ticket ID :</strong>
+
+            <span id="ticketId">
+
+                --------
+
+            </span>
+
+        </p>
+
+        <!-- Generated Ticket Will Appear Here -->
+        <div id="qr"></div>
+
+        <br>
+
+        <a
+            id="downloadQR"
+            href="#"
+            download="PubEntryPass.png"
+        >
+
+            <button type="button">
+
+                ⬇ Download Entry Pass
+
+            </button>
+
+        </a>
+
+    </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+<script src="admin.js"></script>
+
+</body>
+
+</html>
