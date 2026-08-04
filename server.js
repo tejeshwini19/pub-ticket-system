@@ -37,6 +37,13 @@ app.get("/ticket/:ticketId", (req, res) => {
 
 });
 
+// Official Scanner Page
+app.get("/scanner", (req, res) => {
+
+    res.sendFile(path.join(__dirname, "public", "scanner.html"));
+
+});
+
 app.listen(PORT, HOST, () => {
 
     console.log("==================================");

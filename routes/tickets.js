@@ -56,16 +56,13 @@ router.post("/", (req, res) => {
 
             try {
 
-                const ticketUrl = `${BASE_URL}/ticket/${ticketId}`;
+                const qr = await QRCode.toDataURL(ticketId);
 
-                const qr = await QRCode.toDataURL(ticketUrl);
-
-                res.json({
-                    success: true,
-                    ticketId,
-                    qr,
-                    ticketUrl
-                });
+res.json({
+    success: true,
+    ticketId,
+    qr
+});
 
             } catch (error) {
 
